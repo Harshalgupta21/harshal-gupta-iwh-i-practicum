@@ -1,0 +1,19 @@
+a(href="http://localhost:3000/update-cobj") Add/Update this table
+doctype html
+html
+    head
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body
+    h1 Custom Object Table
+    table(bgcolor="black")
+        tr(bgcolor="lightpink")
+            th Name
+            th Company
+            th CC
+        each car in data
+            tr(bgcolor="white") 
+                td #{car.properties.name}
+                td #{car.properties.company}
+                td #{car.properties.cc}
